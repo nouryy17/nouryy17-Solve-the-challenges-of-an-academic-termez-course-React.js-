@@ -1,0 +1,15 @@
+button{
+    flex-basis: 30%;
+    background-color: darkmagenta;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 7px 47px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 4px #dfdfdf;
+}
+button:hover{
+    opacity: 0.7;
+}
