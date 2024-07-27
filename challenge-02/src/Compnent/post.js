@@ -1,10 +1,11 @@
 import "./style/Post.css"
-export default function Post() {
+export default function Post({description,titel,children}) {
     return(
         <div className="Post">
-            <h3>This is the post tital</h3>
+            {children}
+            <h3>{titel}</h3>
             <hr></hr>
-            <p>This is the post body</p>
+            <p>{description}</p>
         </div>
     )
 }

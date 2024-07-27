@@ -1,10 +1,10 @@
 .sidebar{
-    border: 3px solid darkcyan;
+    border: 3px solid #008b8b;
     padding: 10px;
     height: fit-content;
-    width: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 14%;
+    
 }
