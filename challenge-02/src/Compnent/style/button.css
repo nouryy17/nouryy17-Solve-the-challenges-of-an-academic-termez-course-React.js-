@@ -1,5 +1,5 @@
 button{
-    flex-basis: 30%;
+    flex-basis: 35%;
     background-color: darkmagenta;
     color: white;
     border: none;
@@ -8,8 +8,11 @@ button{
     cursor: pointer;
     border-radius: 4px;
     margin-bottom: 15px;
-    box-shadow: 0 4px 4px #dfdfdf;
-    
+    box-shadow: 0 4px 4px #b8b8b8;
+}
+button.new{
+    display: flex;
+    align-items: center;
 }
 button:hover{
     opacity: 0.7;
