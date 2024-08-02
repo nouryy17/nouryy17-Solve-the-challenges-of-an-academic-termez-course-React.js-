@@ -4,10 +4,12 @@ export default function Content() {
     const ArryPOST=[{
         description:"أكادمية ترميز لتعليم البرمجة بمختلف لغاتها و تقنياتها",
         titel:"أكادمية ترميز",
-        c:
-            <h1>20</h1>,
+        c:(
+            <h1>20</h1>
+        ),
         id:1
-    },{
+    },
+    {
         description:"this is the hello world articl",
         titel:" hello world",
         id:2
@@ -20,5 +22,11 @@ export default function Content() {
     const post=ArryPOST.map((post) =>{
         return (<Post key={post.id} titel={post.titel} description={post.description}>{post.c}</Post>)
     })
+    return(
+        <div className="content">
+         {post}
+
+        </div>
+    )
    
 }

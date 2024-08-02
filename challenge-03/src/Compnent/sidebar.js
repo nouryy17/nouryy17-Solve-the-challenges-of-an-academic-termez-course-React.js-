@@ -3,6 +3,7 @@ import "./style/sidebar.css"
 export default function Sidebar() {
     const Arrybutton=[{
         title:"جديدة",
+        Emoji:"💫💫💫",
         id:1,
     },{
         title:"الاكثر قراءة",
@@ -16,8 +17,11 @@ export default function Sidebar() {
     }]
     const butto=Arrybutton.map((button) =>{
     return (
-        <Button title={button.Emoji} key={button.title}> {button.c} </Button> 
+        <Button title={button.title} Emoji={button.Emoji} key={button.id}> {button.c} </Button> 
     )
     })
+    return(
+       <div className="sidebar" style={{height:"fit-content",flexBasis:"30%"}}> {butto}</div>
+    )
    
 }
