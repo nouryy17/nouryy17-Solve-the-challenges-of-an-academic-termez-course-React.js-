@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ const initialProducts = [{
+  id: 0,
+  name: 'Baklava',
+  count: 1,
+}, {
+  id: 1,
+  name: 'Cheese',
+  count: 5,
+}, {
+  id: 2,
+  name: 'Spaghetti',
+  count: 2,
+}];
+ function ShoppingCart() {
+    const [
+      products,
+      setProducts
+    ] = useState(initialProducts)
+  
+    function handleIncreaseClick(productId) {
+  
+    }
+  
+    return (
+      <ul>
+        {products.map(product => (
+          <li key={product.id}>
+            {product.name}
+            {' '}
+            (<b>{product.count}</b>)
+            <button onClick={() => {
+              handleIncreaseClick(product.id);
+            }}>
+              +
+            </button>
+          </li>
+        ))}
+      </ul>
+    );
+  }
 }
-
+ShoppingCart()
 export default App;
