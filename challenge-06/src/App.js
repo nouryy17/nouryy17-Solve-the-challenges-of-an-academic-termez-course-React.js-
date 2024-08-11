@@ -29,7 +29,16 @@ export default function ShoppingCart() {
   
     
   }
-
+  function Minus(productId) {
+    setProducts(products.map(prod => 
+     prod.id === productId 
+       ? { ...prod, count: prod.count - 1 } 
+       : prod
+   ))
+ 
+   
+ }
+ 
   return (
     <ul>
       {products.map(product => (
@@ -41,6 +50,11 @@ export default function ShoppingCart() {
             handleIncreaseClick(product.id);
           }}>
             +
+          </button>
+          <button style={{marginLeft:"5px",width:" 22px"}} onClick={() => {
+            Minus(product.id);
+          }}>
+            -
           </button>
         </li>
       ))}
