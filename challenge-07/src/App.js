@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+    export default function RequestTracker() {
+      const [pending, setPending] = useState(0);
+      const [completed, setCompleted] = useState(0);
+    
+      async function handleClick() {
+        setPending(pending + 1);
+        await delay(3000);
+        setPending(pending - 1);
+        setCompleted(completed + 1);
+      }
+    
+      return (
+        <>
+          <h3>
+            Pending: {pending}
+          </h3>
+          <h3>
+            Completed: {completed}
+          </h3>
+          <button onClick={handleClick}>
+            Buy     
+          </button>
+        </>
+      );
+    }
+    function delay(ms) {
+      return new Promise(resolve => {
+        setTimeout(resolve, ms);
+      });
+    }
+  )
+
+
+
 }
 
 export default App;
